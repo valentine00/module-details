@@ -13,12 +13,10 @@ namespace MODULE DETAILS
         {
 
         }
-
         protected void mtutor_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         protected void finish_Click1(object sender, EventArgs e)
         {
         try { }
