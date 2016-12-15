@@ -1,0 +1,47 @@
+using System;
+using System.Data;
+using System.Data.OleDb;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace DATALAY
+{
+    public partial class main : dbconnectioon
+    
+            
+            
+            try //used to catch exception
+            {
+        OleDbConnection connection = new OleDbConnection();      //declares new microsoft access oleDbconnection
+        connection.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C: \Users\valentine\Documents\Visual Studio 2015\Projects\WebApplicatn\WebApplicatn\bin\roslyn\ecsdatabase3.mdb";   //connectionstring connects to the MS aceess oledb database sp[ecified in quotes
+
+                connection.Open();                //opens the oledb database
+                OleDbCommand command = new OleDbCommand();       //creates command to execute in the database
+        command.Connection = connection;      //database connection that has been created
+                command.CommandText = "INSERT into Module (module_code, module_title, module_tutor, module_mark%, duedate_and_time, issue_date, assessment_type) + values('" + mcode.Text + "','" + mtitle.Text + "','" + mtutor.Text + "','" + pmmark + "','" + ddtime.Text + "','" + idate.Text + "','" + atype.Text + "')";       //query to execute with database.inserts into the module table of the connected microsoft access oledb databse the values of the inputted text from each text box  in order of their arrangements. 
+
+                command.ExecuteNonQuery();              //query to insert data to the database
+                MsgBox("new coursework submission created ");             //displays the message after data has been successfully added to the database
+        connection.Close();   //closes the database
+            }
+            catch (Exception ex) //catches exception
+            {
+                MsgBox("Error  " + ex);                       //displays the exception caught from "(catch(exception ex))" if any
+}
+        }
+
+
+        public void MsgBox(String msg)
+{
+    Page.ClientScript.RegisterStartu
+
+
+        public void MsgBox(String msg)
+        {
+            Page.ClientScript.RegisterStartupScript(Page.GetType(), "Message Box", "<script language='javascript'>alert('" + msg + "')</script>");
+
+        }
+    }
+    }   
+      
