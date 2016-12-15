@@ -1,0 +1,38 @@
+using System;
+using system.Colllections.Generic;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using DATALAY
+
+namespace MODULE DETAILS
+{
+    public partial class main : system.web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void mtutor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void finish_Click1(object sender, EventArgs e)
+        {
+        try { }
+                 MsgBox("new coursework submission created ");             #displays the message after data has been successfully added to the database
+            }
+        catch (Exception ex) #catches exception
+            {
+                MsgBox("Error  " + ex);                       #displays the exception caught from "(catch(exception ex))" if any
+            }
+        public void MsgBox(String msg)
+        {
+            Page.ClientScript.RegisterStartupScript(Page.GetType(), "Message Box", "<script language='javascript'>alert('" + msg + "')</script>");
+
+        }
+    }
+    }   
+      
