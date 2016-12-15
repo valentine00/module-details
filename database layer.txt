@@ -27,21 +27,7 @@ namespace DATALAY
             }
             catch (Exception ex) //catches exception
             {
-                MsgBox("Error  " + ex);                       //displays the exception caught from "(catch(exception ex))" if any
-}
-        }
-
-
-        public void MsgBox(String msg)
-{
-    Page.ClientScript.RegisterStartu
-
-
-        public void MsgBox(String msg)
-        {
-            Page.ClientScript.RegisterStartupScript(Page.GetType(), "Message Box", "<script language='javascript'>alert('" + msg + "')</script>");
-
-        }
+           
     }
     }   
       
